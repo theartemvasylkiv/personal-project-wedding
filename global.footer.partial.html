@@ -1,0 +1,23 @@
+<!-- Footer section (BEM HTML only, no CSS) -->
+<footer class="footer" role="contentinfo">
+  <div class="footer__inner">
+    <!-- Footer navigation section -->
+    <div class="footer__nav-section">
+      <nav
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="global.header-nav.partial.html"
+      ></nav>
+    </div>
+
+    <!-- Footer bottom section with copyright -->
+    <div class="footer__bottom-section">
+      <div class="footer__copyright-left">
+        <p class="footer__copyright-text">&copy; Created by</p>
+      </div>
+      <div class="footer__copyright-right">
+        <p class="footer__copyright-text">All rights Reserved</p>
+      </div>
+    </div>
+  </div>
+</footer>

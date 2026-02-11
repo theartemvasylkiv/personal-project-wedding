@@ -1,0 +1,116 @@
+<!-- John & Jane gallery section (BEM HTML only, no CSS) -->
+<section class="john-jane">
+  <div class="john-jane__inner">
+    <h2 id="john-jane-heading" class="john-jane__title">#johnandjane.</h2>
+
+    <div class="john-jane__decoration">
+      <!-- delete width -->
+      <img
+        src="img/john&jane-decorative.svg"
+        alt="decorative flourish"
+        width="100px"
+      />
+    </div>
+
+    <p class="john-jane__subtitle">Í
+      On our Instagram, we share inspiring photos and show how we see our
+      wedding. Click on the hashtag to see more.
+    </p>
+
+    <!-- Carousel block -->
+    <div class="john-jane__carousel" data-carousel>
+      <!-- Prev button -->
+      <button
+        class="john-jane__nav-button john-jane__nav-button--prev"
+        type="button"
+        aria-label="Previous"
+        data-carousel-prev
+      >
+        &lt;
+      </button>
+
+      <!-- Track contains visible items in a row -->
+      <div class="john-jane__track" role="list" aria-live="polite">
+        <!-- Repeat `.john-jane__item` elements for each image; -->
+        <!-- delete width -->
+        <figure class="john-jane__item" role="listitem">
+          <img
+            class="john-jane__image"
+            src="img/ring-box.png"
+            alt="ring in box"
+            width="300"
+          />
+        </figure>
+
+        <figure class="john-jane__item" role="listitem">
+          <img
+            class="john-jane__image"
+            src="img/couple-wedding-kiss.png"
+            alt="couple kissing"
+            width="300"
+          />
+        </figure>
+
+        <figure class="john-jane__item" role="listitem">
+          <img
+            class="john-jane__image"
+            src="img/wedding-table.png"
+            alt="wedding table"
+            width="300"
+          />
+        </figure>
+
+        <figure class="john-jane__item" role="listitem">
+          <img
+            class="john-jane__image"
+            src="img/hand-on-hand-wedding-rings.png"
+            alt="hands holding with rings"
+            width="300"
+          />
+        </figure>
+
+        <figure class="john-jane__item" role="listitem">
+          <img
+            class="john-jane__image"
+            src="img/darkhaired-woman-bouqet.png"
+            alt="darkhaired woman with bouquet"
+            width="300"
+          />
+        </figure>
+
+        <figure class="john-jane__item" role="listitem">
+          <img
+            class="john-jane__image"
+            src="img/wedding-cake.png"
+            alt="wedding cake"
+            width="300"
+          />
+        </figure>
+
+        <figure class="john-jane__item" role="listitem">
+          <img
+            class="john-jane__image"
+            src="img/couple-in-forrest.png"
+            alt="wedding cake"
+            width="300"
+          />
+        </figure>
+      </div>
+
+      <!-- Next button -->
+      <button
+        class="john-jane__nav-button john-jane__nav-button--next"
+        type="button"
+        aria-label="Next"
+        data-carousel-next
+      >
+        &gt;
+      </button>
+    </div>
+
+    <!-- Optional: carousel indicators (for future JS) -->
+    <div class="john-jane__indicators" aria-hidden="true">
+      <!-- Add indicator buttons via JS if needed -->
+    </div>
+  </div>
+</section>
