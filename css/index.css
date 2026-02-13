@@ -1,0 +1,13 @@
+@import "global.css";
+@import "global.header-nav.css";
+@import "index.header-hero.css";
+@import "index.section-ceremony-start.css";
+@import "index.section-story";
+@import "index.section-story-gallery.css";
+@import "index.section-wedding-details.css";
+@import "index.section-dress-code.css";
+@import "index.section-gallery.css";
+@import "index.section-rsvp.css";
+@import "index.section-john&jane.css";
+@import "global.footer.css";
+/* тут для кожного partial свій css */
