@@ -8,6 +8,21 @@
   box-sizing: border-box;
 }
 
+:root {
+  --color-primary-light: #f5ede3;
+  --color-primary-dark: #37585c;
+  --color-text-primary-light: #dddddd;
+  --color-text-primary-darker: #d8d8d8;
+  --color-bc-john-jane: #768885;
+  --color-hero-title-date: #545454;
+  --color-wedding-details-text: #5e5e5e;
+  --color-wedding-details-address-text: #7d7d7d;
+  --color-rsvp-text: #7d6e5c;
+  --color-rsvp-pole-text: #8f9c9a;
+  --color-timer-numbers: #ffffff;
+  --color-timer-text: #a4b2b4;
+}
+
 body {
-  background-color: #37585c;
+  background-color: var(--color-primary-dark);
 }
