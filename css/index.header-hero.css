@@ -1,0 +1,15 @@
+.card__pretitle {
+    color: var(--color-bc-john-jane);
+}
+
+.card__title-symbol {
+    color: var(--color-bc-john-jane);
+}
+
+.card__title {
+    color: var(--color--primary-dark);
+}
+
+.card__datetime {
+    color: var(--color-hero-title-date);
+}
