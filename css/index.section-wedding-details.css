@@ -1,3 +1,7 @@
 .wedding-details {
     background-color: var(--color-primary-light);
 }
+
+.wedding-details__header-title {
+    color: var(--color-details-title);
+}
