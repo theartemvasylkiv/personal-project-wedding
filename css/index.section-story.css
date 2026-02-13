@@ -1,7 +1,7 @@
 .story__title {
-    color: var(--color-primary-light);
+  color: var(--color-primary-light);
 }
 
 .story__paragraph {
-    color: var(--color-text-primary-darker);
+  color: var(--color-text-primary-darker);
 }

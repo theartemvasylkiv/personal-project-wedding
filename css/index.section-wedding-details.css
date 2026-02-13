@@ -1,7 +1,27 @@
 .wedding-details {
-    background-color: var(--color-primary-light);
+  background-color: var(--color-primary-light);
 }
 
 .wedding-details__header-title {
-    color: var(--color-details-title);
+  color: var(--color-primary-dark);
+}
+
+.wedding-details__title {
+  color: var(--color-primary-dark);
+}
+
+.wedding-details__time {
+  color: var(--color-bc-john-jane);
+}
+
+.wedding-details__paragraph {
+  color: var(--color-wedding-details-text);
+}
+
+.wedding-details__location {
+  color: var(--color-wedding-details-address-text);
+}
+
+.wedding-details__hotel-name {
+  color: var(--color-wedding-details-address-text);
 }

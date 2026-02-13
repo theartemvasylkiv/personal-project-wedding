@@ -10,7 +10,7 @@
 
 :root {
   --color-primary-light: #f5ede3;
-  --color-primary-dark: #37585c;
+  --color-primary-dark: #38585c;
   --color-text-primary-light: #dddddd;
   --color-text-primary-darker: #d8d8d8;
   --color-bc-john-jane: #768885;
@@ -20,7 +20,7 @@
   --color-rsvp-text: #7d6e5c;
   --color-rsvp-pole-text: #8f9c9a;
   --color-timer-text: #a4b2b4;
-  --color-details-title: #38585c;
+  --color-bc-rsvp: #ffffff;
 }
 
 body {

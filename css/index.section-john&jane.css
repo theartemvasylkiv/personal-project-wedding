@@ -1,3 +1,11 @@
 .john-jane {
-    background-color: var(--color-bc-john-jane);
+  background-color: var(--color-bc-john-jane);
+}
+
+.john-jane__title {
+  color: var(--color-primary-light);
+}
+
+.john-jane__subtitle {
+  color: var(--color-text-primary-light);
 }

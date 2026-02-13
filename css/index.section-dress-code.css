@@ -1,0 +1,26 @@
+.dress-code__title {
+  color: var(--color-primary-light);
+  .dress-code-dot {
+    color: var(--color-bc-john-jane);
+  }
+}
+
+.dress-code__description {
+  color: var(--color-text-primary-light);
+}
+
+.dress-code__card {
+  background-color: var(--color-bc-john-jane);
+}
+
+.dress-code__card-icon {
+  background-color: var(--color-primary-light);
+}
+
+.dress-code__card-title {
+  color: var(--color-primary-light);
+}
+
+.dress-code__card-text {
+  color: var(--color-text-primary-darker);
+}

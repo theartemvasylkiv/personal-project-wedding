@@ -1,0 +1,23 @@
+.rsvp__title {
+  color: var(--color-primary-dark);
+}
+
+.rsvp__description {
+  color: var(--color-rsvp-text);
+}
+
+.rsvp__container {
+  background-color: var(--color-bc-rsvp);
+}
+
+.rsvp__label {
+  color: var(--color-rsvp-pole-text);
+}
+
+.rsvp__field {
+  background-color: var(--color-primary-light);
+}
+
+.rsvp__actions {
+  background-color: var(--color-bc-john-jane);
+}

@@ -1,0 +1,10 @@
+.gifts-registry__title {
+  color: var(--color-primary-light);
+  .gift-registry-dot {
+    color: var(--color-bc-john-jane);
+  }
+}
+
+.gifts-registry__text {
+  color: var(--color-text-primary-darker);
+}
