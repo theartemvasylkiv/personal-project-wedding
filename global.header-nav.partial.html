@@ -1,14 +1,22 @@
-<nav class="header__nav container"">
-  <!-- видалити ширину -->
-  <div><img src="img/header-logo.svg" alt="logo image" width="100px"/></div>
-  <div сlass="header__nav-list">
-    <!-- Прибрати зірочки з ul -->
+<nav class="header__nav container">
+  <div class="header__nav-brand">
+    <img src="img/header-logo.svg" alt="logo image" width="100" height="auto" />
+  </div>
+
+  <button class="header__nav-toggle" aria-label="Open navigation">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+
+  <div class="header__nav-list">
     <ul>
       <li class="header--nav-item">Our Story</li>
       <li class="header--nav-item">Wedding Details</li>
       <li class="header--nav-item">Dress Code</li>
       <li class="header--nav-item">Gifts Registry</li>
-      <li class="header--nav-item">Engagement RSVP</li>
+      <li class="header--nav-item">Engagement</li>
+      <li class="header--nav-item">RSVP</li>
     </ul>
   </div>
 </nav>

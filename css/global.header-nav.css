@@ -1,8 +1,58 @@
 .header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
   color: var(--color-primary-light);
+  padding: 1rem 0;
 }
 
 .header--nav-item:hover {
   color: var(--color-white);
 }
 
+.header__nav-list ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.header__nav-toggle {
+  display: none;
+  background: transparent;
+  border: 0;
+  padding: 0.25rem;
+  cursor: pointer;
+}
+
+.header__nav-toggle .bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: currentColor;
+  margin: 4px 0;
+}
+
+/* Responsive: show hamburger <=1000px, show full nav >1000px */
+@media (max-width: 1000px) {
+  .header__nav-list ul {
+    display: none;
+  }
+
+  .header__nav-toggle {
+    display: block;
+  }
+}
+
+@media (min-width: 1001px) {
+  .header__nav-toggle {
+    display: none;
+  }
+
+  .header__nav-list ul {
+    display: flex;
+  }
+}

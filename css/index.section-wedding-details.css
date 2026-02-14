@@ -31,7 +31,3 @@
 .wedding-details__info {
   text-align: left;
 }
-
-.wedding-details__location-text {
-  color: var (--color-secondary-text-light);
-}
