@@ -11,17 +11,17 @@
 }
 
 .wedding-details__time {
-  color: var(--color-bc-john-jane);
+  color: var(--color-secondary);
 }
 
 .wedding-details__paragraph {
-  color: var(--color-wedding-details-text);
+  color: var(--color-secondary-text-dark);
 }
 
 .wedding-details__location {
-  color: var(--color-wedding-details-address-text);
+  color: var(--color-secondary-text-light);
 }
 
 .wedding-details__hotel-name {
-  color: var(--color-wedding-details-address-text);
+  color: var(--color-secondary-text-light);
 }

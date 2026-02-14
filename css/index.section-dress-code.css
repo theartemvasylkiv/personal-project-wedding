@@ -1,16 +1,16 @@
 .dress-code__title {
   color: var(--color-primary-light);
   .dress-code-dot {
-    color: var(--color-bc-john-jane);
+    color: var(--color-secondary);
   }
 }
 
 .dress-code__description {
-  color: var(--color-text-primary-light);
+  color: var(--color-primary-text-light);
 }
 
 .dress-code__card {
-  background-color: var(--color-bc-john-jane);
+  background-color: var(--color-secondary);
 }
 
 .dress-code__card-icon {
@@ -22,5 +22,5 @@
 }
 
 .dress-code__card-text {
-  color: var(--color-text-primary-darker);
+  color: var(--color-primary-text-dark);
 }

@@ -1,9 +1,10 @@
 .card__pretitle {
-  color: var(--color-bc-john-jane);
+  color: var(--color-secondary);
+  font-family: "Allura", cursive;
 }
 
 .card__title-symbol {
-  color: var(--color-bc-john-jane);
+  color: var(--color-secondary);
 }
 
 .card__title {

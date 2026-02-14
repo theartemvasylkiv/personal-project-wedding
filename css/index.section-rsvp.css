@@ -3,15 +3,15 @@
 }
 
 .rsvp__description {
-  color: var(--color-rsvp-text);
+  color: var(--color-tertiary);
 }
 
 .rsvp__container {
-  background-color: var(--color-bc-rsvp);
+  background-color: var(--color-white);
 }
 
 .rsvp__label {
-  color: var(--color-rsvp-pole-text);
+  color: var(--color-tertiary-light);
 }
 
 .rsvp__field {
@@ -19,5 +19,5 @@
 }
 
 .rsvp__actions {
-  background-color: var(--color-bc-john-jane);
+  background-color: var(--color-secondary);
 }
