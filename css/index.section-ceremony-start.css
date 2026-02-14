@@ -13,3 +13,18 @@
 .countdown__label {
   color: var(--color-timer-text);
 }
+
+.ceremony-start__title {
+  font-size: 50px;
+  text-align: center;
+}
+
+.countdown__value {
+  font-size: 36px;
+  text-align: center;
+}
+
+.countdown__label {
+  font-size: 18px;
+  text-align: center;
+}

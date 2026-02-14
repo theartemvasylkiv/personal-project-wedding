@@ -9,6 +9,7 @@
   margin: 0;
   /* властивість яка міняє ширину для не тільки контент а всього разом */
   box-sizing: border-box;
+  /* outline: 1px red solid; */
 }
 
 :root {
@@ -37,4 +38,21 @@ h4,
 h5,
 h6 {
   font-family: "Suranna", serif;
+  text-align: center;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+/* для коретності відображенян зображень */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }

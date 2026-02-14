@@ -1,3 +1,8 @@
 .header__nav {
   color: var(--color-primary-light);
 }
+
+.header--nav-item:hover {
+  color: var(--color-white);
+}
+

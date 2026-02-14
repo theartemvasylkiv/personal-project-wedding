@@ -1,6 +1,8 @@
 .card__pretitle {
   color: var(--color-secondary);
   font-family: "Allura", cursive;
+  text-align: center;
+  font-size: 20px;
 }
 
 .card__title-symbol {
@@ -13,4 +15,14 @@
 
 .card__datetime {
   color: var(--color-hero-title-date);
+}
+
+.card__title {
+  font-size: 34px;
+  text-align: center;
+}
+
+.card__datetime {
+  font-size: 14px;
+  text-align: center;
 }
