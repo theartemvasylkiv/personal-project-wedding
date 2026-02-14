@@ -8,10 +8,12 @@
 
 .wedding-details__title {
   color: var(--color-primary-dark);
+  text-align: left;
 }
 
 .wedding-details__time {
   color: var(--color-secondary);
+  font-size: 14px;
 }
 
 .wedding-details__paragraph {
@@ -24,4 +26,12 @@
 
 .wedding-details__hotel-name {
   color: var(--color-secondary-text-light);
+}
+
+.wedding-details__info {
+  text-align: left;
+}
+
+.wedding-details__location-text {
+  color: var (--color-secondary-text-light);
 }

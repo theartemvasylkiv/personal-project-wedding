@@ -5,3 +5,8 @@
 .story__paragraph {
   color: var(--color-primary-text-dark);
 }
+
+.story__paragraph {
+  font-size: 18px;
+  text-align: center;
+}
