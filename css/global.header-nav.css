@@ -56,3 +56,11 @@
     display: flex;
   }
 }
+
+.header__nav-brand {
+  padding-left: 24px;
+  width: 140px;
+  height: 64px;
+  box-sizing: border-box;
+  display: inline-block;
+}

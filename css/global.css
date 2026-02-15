@@ -32,6 +32,7 @@ body {
   background-color: var(--color-primary-dark);
   font-family: "Nanum Myeongjo", serif;
   font-size: 18px;
+  margin: 0;
 }
 
 h1 {
@@ -46,6 +47,7 @@ h6 {
   font-family: "Suranna", serif;
   text-align: center;
   font-weight: normal;
+  margin: 0;
 }
 
 h2 {
@@ -57,12 +59,24 @@ h3 {
 }
 
 /* для коретності відображенян зображень */
-img {
+img,
+svg {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  overflow: visible;
+  padding: 24px;
+  outline: 1px red solid;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
