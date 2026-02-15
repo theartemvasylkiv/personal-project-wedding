@@ -8,5 +8,49 @@
 
 .story__paragraph {
   font-size: 18px;
-  text-align: center;
+  text-align: left;
+}
+
+.story__container {
+  display: flex;
+  align-items: center;
+}
+
+.story__text-wrapper {
+  background-color: var(--color-secondary);
+  width: 1195px;
+  height: 272px;
+  margin: 0 auto;
+}
+
+
+/* On wider screens, vertically center the content so the gallery
+   doesn't sit opposite the first paragraph */
+@media (min-width: 768px) {
+  .story__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+}
+
+/* Responsive: stack gallery under content on small screens */
+@media (max-width: 767px) {
+  .story__container {
+    flex-direction: column;
+    width: calc(100% - 32px);
+    height: auto;
+    margin: 0 16px;
+    align-items: stretch;
+  }
+
+  .story__content,
+  .story__gallery {
+    width: 100%;
+  }
+
+  .story__gallery {
+    margin-top: 16px;
+  }
 }
