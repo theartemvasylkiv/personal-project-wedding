@@ -70,8 +70,7 @@ svg {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  overflow: visible;
-  padding: 24px;
+  padding: 16px;
   outline: 1px red solid;
 }
 

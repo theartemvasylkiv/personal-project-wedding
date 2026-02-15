@@ -18,8 +18,8 @@
 
 .story__text-wrapper {
   background-color: var(--color-secondary);
-  width: 1195px;
-  height: 272px;
+  width: 100%;
+  height: auto;
   margin: 0 auto;
 }
 

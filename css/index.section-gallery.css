@@ -5,3 +5,7 @@
 .gallery__description {
   color: var(--color-primary-text-light);
 }
+
+.story-gallery__item--large {
+  min-width: 176px;
+}
