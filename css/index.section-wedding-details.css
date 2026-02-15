@@ -29,5 +29,10 @@
 }
 
 .wedding-details__info {
+  background-color: var(--color-white);
   text-align: left;
+  padding-top: 33px;
+  padding-bottom: 33px;
+  padding-left: 39px;
+  padding-right: 39px;
 }
