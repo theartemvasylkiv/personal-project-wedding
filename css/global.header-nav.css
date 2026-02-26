@@ -1,66 +1,129 @@
+/* ===============================
+   Header Navigation
+================================= */
+
 .header__nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  padding: 25px;
   color: var(--color-primary-light);
-  padding: 1rem 0;
+  position: relative;
 }
 
-.header--nav-item:hover {
-  color: var(--color-white);
-}
+/* ===== Brand ===== */
 
-.header__nav-list ul {
+.header__nav-brand {
+  width: 140px;
+  /* мобільна версія */
+  height: 64px;
+  flex-shrink: 0;
   display: flex;
-  gap: 2rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
   align-items: center;
 }
 
-.header__nav-toggle {
-  display: none;
-  background: transparent;
-  border: 0;
-  padding: 0.25rem;
-  cursor: pointer;
+.header__nav-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
-.header__nav-toggle .bar {
+/* ===== Toggle / Hamburger ===== */
+
+.header__nav-toggle {
+  background: transparent;
+  border: none;
+  padding: 0.25rem;
+  cursor: pointer;
+  display: block;
+  z-index: 20;
+  flex-shrink: 0;
+}
+
+.header__nav-bar {
   display: block;
   width: 24px;
   height: 2px;
+  margin: 5px 0;
   background: currentColor;
-  margin: 4px 0;
+  transition: 0.3s ease;
 }
 
-/* Responsive: show hamburger <=1000px, show full nav >1000px */
-@media (max-width: 1000px) {
-  .header__nav-list ul {
+/* ===== Navigation List ===== */
+
+.header__nav-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: var(--color-bg-mobile-menu);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.header__nav-menu {
+  list-style: none;
+  padding: 1rem 0;
+  margin: 0;
+  text-align: center;
+}
+
+.header__nav-item {
+  padding: 0.75rem 0;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.header__nav-item:hover {
+  color: var(--color-white);
+}
+
+/* ===== Active State ===== */
+
+.header__nav-list--active {
+  max-height: 500px;
+}
+
+/* ===== Toggle Animation ===== */
+
+.header__nav-toggle--active .header__nav-bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.header__nav-toggle--active .header__nav-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.header__nav-toggle--active .header__nav-bar:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ===============================
+   Desktop
+================================= */
+
+/* @media (min-width: 1000px) {
+  .header__nav-toggle {
     display: none;
   }
 
-  .header__nav-toggle {
-    display: block;
-  }
-}
-
-@media (min-width: 1001px) {
-  .header__nav-toggle {
-    display: none;
+  .header__nav-list {
+    position: static;
+    max-height: none;
+    background: transparent;
+    width: auto;
   }
 
-  .header__nav-list ul {
+  .header__nav-menu {
     display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 0;
   }
-}
 
-.header__nav-brand {
-  padding-left: 24px;
-  width: 140px;
-  height: 64px;
-  box-sizing: border-box;
-  display: inline-block;
-}
+  .header__nav-item {
+    padding: 0;
+  }
+}  */
