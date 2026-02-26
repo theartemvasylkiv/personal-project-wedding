@@ -48,7 +48,6 @@
 .card__pretitle {
   font-family: "Allura", cursive;
   font-size: 22px;
-  line-height: 28px;
   font-weight: 400;
   color: var(--color-secondary);
   text-align: center;
@@ -69,12 +68,11 @@
 }
 
 .card__title {
-  font-size: 34px;
-  line-height: 40px;
-  font-weight: 400;
+  font-size: 26px;
+  font-weight: 900;
   color: var(--color-primary-dark);
   text-align: center;
-  margin: 0 0 40px 0;
+  margin: 0 15px;
 }
 
 .card__title-symbol {
@@ -84,9 +82,8 @@
 
 .card__datetime {
   font-size: 14px;
-  line-height: 28px;
   font-weight: 800;
   color: var(--color-hero-title-date);
   text-align: center;
-  margin: 0;
+  margin: 30px;
 }
