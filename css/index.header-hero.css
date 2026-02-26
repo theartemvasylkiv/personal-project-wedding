@@ -1,73 +1,92 @@
-/* ========== Hero Background Section ========== */
+/* ===============================
+   Hero Section
+================================= */
+
+/* ===== Hero Section ===== */
 .hero__background {
   background-image: url(../img/couple-painting.png);
   background-size: cover;
-  min-height: 521px;
   background-position: center;
+  min-height: 521px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
 
-/* ========== Hero Container (Card) ========== */
 .hero__container {
-  padding-left: 24px;
-  padding-right: 24px;
+  width: 100%;
+  height: 272px;
+  /* фіксована висота */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 380px;
-  height: auto;
-  max-width: 380px;
-  gap: 30px;
   box-sizing: border-box;
+  max-width: 100%;
+  padding: 0 25px;
+  /* адаптивний padding для мобільних */
+}
+
+/* ===== Hero Card ===== */
+.hero__card {
+  width: 100%;
+  /* адаптивна ширина */
+  min-width: 262px;
+  /* мінімальна ширина на мобільних */
+  height: 100%;
+  /* фіксована висота = 272px */
   background-color: var(--color-primary-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
-/* ========== Card Elements ========== */
+/* ===== Card Elements ===== */
 .card__pretitle {
-  color: var(--color-secondary);
   font-family: "Allura", cursive;
-  text-align: center;
   font-size: 22px;
-  font-weight: 400;
   line-height: 28px;
-  margin: 0;
-  margin-bottom: 30px;
-  margin-top: 30px;
-}
-
-.card__title-symbol {
+  font-weight: 400;
   color: var(--color-secondary);
-  padding: 24px;
-  margin: 0;
-}
-
-.card__title {
-  color: var(--color-primary-dark);
-  font-size: 34px;
   text-align: center;
-  font-weight: 400;
-  line-height: 28px;
-  margin: 0;
-  margin-bottom: 40px;
-}
-
-.card__datetime {
-  color: var(--color-hero-title-date);
-  font-size: 14px;
-  text-align: center;
-  font-weight: 800;
-  line-height: 28px;
-  margin: 0;
+  margin: 30px 0;
 }
 
 .card__ornament {
   display: flex;
   justify-content: center;
   height: 32px;
-  margin: 0;
   margin-bottom: 30px;
+}
+
+.card__ornament img {
+  height: 100%;
+  width: auto;
+  display: block;
+}
+
+.card__title {
+  font-size: 34px;
+  line-height: 40px;
+  font-weight: 400;
+  color: var(--color-primary-dark);
+  text-align: center;
+  margin: 0 0 40px 0;
+}
+
+.card__title-symbol {
+  color: var(--color-secondary);
+  padding: 0;
+}
+
+.card__datetime {
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: 800;
+  color: var(--color-hero-title-date);
+  text-align: center;
+  margin: 0;
 }
