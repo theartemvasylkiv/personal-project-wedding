@@ -1,66 +1,116 @@
+/* ============================= */
+/* Ceremony Start Section */
+/* ============================= */
+
 .ceremony-start__container {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  /* вниз */
+  align-items: center;
+  /* по горизонталі центр */
+  gap: 25px;
+  /* рівна відстань між ВСІМА елементами */
+  padding-top: 90px;
+  padding-bottom: 75px;
 }
 
-
-
+/* ----------------------------- */
+/* Icon */
+/* ----------------------------- */
 
 .ceremony-start__icon {
-  background-color: var(--color-primary-light);
   display: flex;
   justify-content: center;
   align-items: center;
+
   width: 70px;
   height: 70px;
+
+  background-color: var(--color-primary-light);
   border-radius: 50%;
   overflow: hidden;
 }
 
-/* Make the inline SVG inside the circular icon 40x40 */
 .ceremony-start__icon svg {
   width: 40px;
   height: 40px;
   display: block;
 }
 
+/* ----------------------------- */
+/* Title */
+/* ----------------------------- */
+
+.ceremony-start__title {
+  line-height: 1;
+  /* або 1.2, залежно від шрифту */
+  text-align: center;
+  margin: 0;
+  /* прибрати стандартний margin h2 */
+  color: var(--color-primary-light);
+}
+
+/* ----------------------------- */
+/* Flourish */
+/* ----------------------------- */
+
+.ceremony-start__flourish img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ----------------------------- */
+/* Countdown */
+/* ----------------------------- */
+
 .ceremony-start__countdown {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding-top: 10px;
 }
 
-.ceremony-start__title {
-  color: var(--color-primary-light);
-}
+/* Countdown Item */
 
-.countdown__value {
-  color: var(--color-primary-light);
-}
-
-.countdown__label {
-  color: var(--color-timer-text);
-}
-
-.ceremony-start__title {
-  text-align: center;
-}
-
-.countdown__value {
-  font-size: 36px;
-  text-align: center;
-}
-
-.countdown__label {
-  font-size: 18px;
-  text-align: center;
-}
-
-/* Ensure each countdown item stacks value above label */
 .countdown__item {
+  flex: 1 1 57.27px;
+  /* стартує з 57.27px */
+  aspect-ratio: 1 / 1;
+  /* висота = ширині */
+
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  /* для вирівнювання border по центру між елементами */
+  padding-right: 8px;
+  /* половина gap між елементами */
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.countdown__item:last-child {
+  border-right: none;
+}
+
+/* Countdown Value */
+
+.countdown__value {
+  font-family: "Suranna", serif;
+  font-size: clamp(20px, 5vw, 36px);
+  text-align: center;
+  color: var(--color-primary-light);
+}
+
+/* Countdown Label */
+
+.countdown__label {
+  font-size: clamp(12px, 3vw, 18px);
+  /* мінімум 12px, максимум 18px, росте пропорційно екрану */
+  line-height: 1;
+  /* прибирає зайві відступи всередині рядка */
+  max-height: 30%;
+  /* займає ~30% висоти контейнера */
+  text-align: center;
+  color: var(--color-timer-text);
 }
