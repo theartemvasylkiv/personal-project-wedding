@@ -1,42 +1,91 @@
-.story__title {
-  color: var(--color-primary-light);
-}
+/* ==========================
+   Story Section
+========================== */
 
-.story__paragraph {
-  color: var(--color-primary-text-dark);
-}
-
-.story__paragraph {
-  font-size: 18px;
-  text-align: left;
-}
-
+/* Container */
 .story__container {
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* для адаптивності */
+  margin: 0 auto;
+  padding-top: 0;
+  padding-left: 24px;
+  padding-right: 24px;
+
 }
 
+/* Content (ліва частина) */
+.story__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: var(--color-secondary);
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* Title */
+.story__title {
+  color: var(--color-primary-light);
+  padding-left: 16px;
+}
+
+/* Decorative flourish */
+.story__flourish img {
+  /* width видалено */
+  display: block;
+  padding-left: 16px;
+  height: 32px;
+  margin-bottom: 5px;
+
+}
+
+/* Text wrapper */
 .story__text-wrapper {
   background-color: var(--color-secondary);
   width: 100%;
   height: auto;
   margin: 0 auto;
+  padding: 16px;
+  line-height: 28px;
 }
 
+/* Paragraphs */
+.story__paragraph {
+  color: var(--color-primary-text-dark);
+  font-size: 18px;
+  text-align: left;
+  margin-bottom: 16px;
+}
 
-/* On wider screens, vertically center the content so the gallery
-   doesn't sit opposite the first paragraph */
-@media (min-width: 768px) {
+/* Gallery (права частина) */
+.story__gallery img {
+  /* width видалено */
+  display: block;
+  max-width: 100%;
+  height: auto;
+  padding-top: 50px;
+}
+
+/* ==========================
+   Media Queries
+========================== */
+
+/* Wider screens: вертикальне центрування контенту */
+/* @media (min-width: 768px) {
   .story__content {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     height: 100%;
   }
-}
+} */
 
-/* Responsive: stack gallery under content on small screens */
-@media (max-width: 767px) {
+/* Small screens: stack gallery under content */
+/* @media (max-width: 767px) {
   .story__container {
     flex-direction: column;
     width: calc(100% - 32px);
@@ -53,4 +102,4 @@
   .story__gallery {
     margin-top: 16px;
   }
-}
+} */
