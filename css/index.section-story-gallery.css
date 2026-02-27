@@ -1,67 +1,83 @@
+/* =========================
+   STORY GALLERY (mobile-first)
+   ========================= */
+
+
+/* Container */
 .story-gallery__container {
-    /* Mobile-first: place large image and small-column side-by-side */
     display: flex;
     flex-direction: row;
     gap: 15px;
-    /* tuned so two small images (53+53) + gap ~= 121 */
     align-items: stretch;
-}
-
-.story-gallery__item {
-    overflow: hidden;
-}
-
-/* Mobile-first: images scale with container width */
-.story-gallery__image {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-}
-
-/* Large image on mobile: keep exact proportions 176x121 but don't overflow */
-.story-gallery__image--large {
-    width: 176px;
-    height: 121px;
+    /* child heights match tallest item (the image) */
     max-width: 100%;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto;
 }
 
-/* Mobile: right column stacks two small images and matches large image height */
+
+/* Large item (left) - takes 2/3 of width */
+.story-gallery__item--large {
+    flex: 2 1 0;
+    width: 100%;
+    overflow: hidden;
+    /* allow image to be cropped */
+}
+
+
+/* Right column - takes 1/3 of width */
 .story-gallery__column-right {
-    height: 121px;
-    /* equal to .story-gallery__image--large height */
+    flex: 1 1 0;
     display: flex;
     flex-direction: column;
     gap: 16px;
-    align-items: center;
+    /* height will stretch to match large item via container */
 }
 
+
+/* Small items inside right column */
 .story-gallery__column-right>.story-gallery__item {
     flex: 1 1 0;
-    min-height: 0;
-    gap: 15px;
+    /* share available height evenly */
+    display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    width: 100%;
 }
 
-.story-gallery__image--small {
-    width: auto;
-    height: 100%;
-    max-width: 100%;
-    object-fit: contain;
-    aspect-ratio: 82 / 53;
+/* Base image styles */
+.story-gallery__image {
     display: block;
-    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    /* natural height based on width */
+    object-fit: contain;
+    max-width: 100%;
 }
 
-@media (min-width: 768px) {
+/* Large image */
+.story-gallery__image--large {
+    object-fit: cover;
+    /* fill container, cropping if necessary */
+    width: 100%;
+    height: 100%;
+}
 
-    /* Desktop: left large image spans two rows; right column stacks two
-         small images which together equal the large image's height. */
+/* Small images */
+.story-gallery__image--small {
+    object-fit: contain;
+    /* no fixed width so they scale with parent height */
+}
+
+/* optional: cap large item width so the overall component stays proportional */
+.story-gallery__item--large {
+    max-width: 80vw;
+    /* adjust as needed, keeps large photo from growing too wide */
+}
+
+/* =========================
+   DESKTOP
+   ========================= */
+
+/* @media (min-width: 768px) {
     .story-gallery__container {
         display: grid;
         grid-template-columns: 2fr 1fr;
@@ -75,13 +91,11 @@
         width: 100%;
     }
 
-    /* Right column: stack two items and make them share the large image height */
     .story-gallery__column-right {
         display: grid;
         grid-template-rows: 1fr 1fr;
         gap: 16px;
         height: auto;
-        /* let grid determine height based on large image */
     }
 
     .story-gallery__column-right>.story-gallery__item {
@@ -89,30 +103,21 @@
         min-height: 0;
     }
 
-    /* Make small images fill their grid cell height while preserving proportions */
-    .story-gallery__image {
+    /* Desktop image behavior */
+/* .story-gallery__image {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        display: block;
     }
 
-    /* Desktop: small-image specific overrides so they expand with the column */
     .story-gallery__image--small {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
         aspect-ratio: auto;
-        display: block;
     }
 
-    /* Large image: preserve original proportions (176/121). Use full
-       column height and keep image un-cropped by sizing width:auto. */
     .story-gallery__image--large {
         height: 100%;
         width: auto;
         object-fit: contain;
-        display: block;
         margin: 0 auto;
     }
-}
+} */
