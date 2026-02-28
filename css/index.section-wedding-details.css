@@ -1,14 +1,64 @@
+/* ===== SECTION ===== */
+
 .wedding-details {
   background-color: var(--color-primary-light);
+  padding-top: 90px;
+}
+
+/* ===== CONTAINER ===== */
+
+.wedding-details__container {
+  padding-left: 24px;
+  padding-right: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== HEADER ===== */
+
+.wedding-details__header {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
 }
 
 .wedding-details__header-title {
   color: var(--color-primary-dark);
 }
 
+/* make symbol container shrink to content and image maintain aspect ratio */
+.wedding-details__header-symbol {
+  display: inline-block;
+}
+
+.wedding-details__header-symbol-image {
+  height: 32px;
+  width: auto;
+  display: block;
+}
+
+/* ===== ROWS ===== */
+
+.wedding-details__info {
+  background-color: var(--color-white);
+  text-align: left;
+  padding: 33px 39px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* ===== TITLES & TEXT ===== */
+
 .wedding-details__title {
   color: var(--color-primary-dark);
   text-align: left;
+  line-height: 1.2;
 }
 
 .wedding-details__time {
@@ -20,19 +70,50 @@
   color: var(--color-secondary-text-dark);
 }
 
-.wedding-details__location {
-  color: var(--color-secondary-text-light);
-}
-
 .wedding-details__hotel-name {
   color: var(--color-secondary-text-light);
 }
 
-.wedding-details__info {
-  background-color: var(--color-white);
-  text-align: left;
-  padding-top: 33px;
-  padding-bottom: 33px;
-  padding-left: 39px;
-  padding-right: 39px;
+/* ===== LOCATION BLOCK ===== */
+
+.wedding-details__location {
+  color: var(--color-secondary-text-light);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  /* space between icon and text */
+}
+
+/* icon container fixed size; svg fills it */
+.wedding-details__location-icon {
+  flex: 0 0 auto;
+  width: 20px;
+  height: 24px;
+  display: inline-block;
+}
+
+.wedding-details__location-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.wedding-details__location-text {
+  /* allows text to wrap naturally next to the icon */
+  display: inline-block;
+  line-height: 30px;
+}
+
+.wedding-details__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.wedding-details__paragraph {
+  padding-bottom: 20px;
+}
+
+.wedding-details__hotel-name {
+  font-size: 14px;
 }
