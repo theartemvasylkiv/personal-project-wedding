@@ -3,6 +3,7 @@
 .wedding-details {
   background-color: var(--color-primary-light);
   padding-top: 90px;
+  padding-bottom: 90px;
 }
 
 /* ===== CONTAINER ===== */
@@ -79,7 +80,7 @@
 .wedding-details__location {
   color: var(--color-secondary-text-light);
   display: inline-flex;
-  align-items: center;
+  align-items: flesh-start;
   gap: 8px;
   /* space between icon and text */
 }
@@ -90,6 +91,8 @@
   width: 20px;
   height: 24px;
   display: inline-block;
+  ;
+
 }
 
 .wedding-details__location-icon svg {
