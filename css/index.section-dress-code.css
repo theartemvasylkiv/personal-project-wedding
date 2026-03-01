@@ -1,21 +1,106 @@
+/* ============================= */
+/* DRESS CODE SECTION */
+/* ============================= */
+
+.dress-code__container {
+  padding-top: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 24px;
+  padding-right: 24px;
+  gap: 20px;
+}
+
+
 .dress-code__title {
   color: var(--color-primary-light);
-
-  .dress-code-dot {
-    color: var(--color-secondary);
-  }
+  line-height: 1.1;
 }
+
+.dress-code__title .dress-code-dot {
+  color: var(--color-secondary);
+}
+
+/* ----------------------------- */
+/* Description */
+/* ----------------------------- */
 
 .dress-code__description {
   color: var(--color-primary-text-light);
+  font-size: 20px;
+  text-align: center;
 }
 
+/* ----------------------------- */
+/* Divider */
+/* ----------------------------- */
+
+.dress-code__divider {
+  padding-bottom: 30px;
+}
+
+
+.dress-code__decoration {
+  height: 32px;
+  width: 100%;
+  max-width: 93px;
+  /* adjust as needed */
+  display: block;
+  object-fit: contain;
+}
+
+.dress-code__decoration img,
+.dress-code__decoration svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ----------------------------- */
+/* Cards */
+/* ----------------------------- */
+
 .dress-code__card {
-  background-color: var(--color-secondary);
+  background-image: url("//res2.weblium.site/res/60895226f35fe600213e2271/608ac918ce91b400213685ad?nowebp");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding-top: 40px;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-bottom: 40px;
+}
+
+.dress-code__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  /* відстань між картками */
+  padding-bottom: 155px;
 }
 
 .dress-code__card-icon {
   background-color: var(--color-primary-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 70px;
+  height: 70px;
+
+  background-color: var(--color-primary-light);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.dress-code__card-icon svg {
+  width: 40px;
+  height: 40px;
+  display: block;
 }
 
 .dress-code__card-title {
@@ -24,13 +109,6 @@
 
 .dress-code__card-text {
   color: var(--color-primary-text-dark);
-}
-
-.dress-code__description {
-  font-size: 20px;
   text-align: center;
-}
-
-.dress-code__card-text {
-  text-align: center;
+  line-height: 29px;
 }
