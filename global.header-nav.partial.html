@@ -3,22 +3,23 @@
     <img src="img/header-logo.svg" alt="Wedding logo" class="header__nav-logo" />
   </div>
 
-  <button class="header__nav-toggle" aria-label="Open navigation" aria-expanded="false">
+  <button class="header__nav-toggle navbar-toggler" type="button" data-bs-toggle="collapse"
+    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+    aria-label="Toggle navigation">
     <span class="header__nav-bar"></span>
     <span class="header__nav-bar"></span>
     <span class="header__nav-bar"></span>
+    <span class="navbar-toggler-icon" aria-hidden="true"></span>
   </button>
 
-  <div class="header__nav-list">
-    <ul class="header__nav-menu">
-      <li class="header__nav-item">Our Story</li>
-      <li class="header__nav-item">Wedding Details</li>
-      <li class="header__nav-item">Dress Code</li>
-      <li class="header__nav-item">Gifts Registry</li>
-      <li class="header__nav-item">Engagement</li>
-      <li class="header__nav-item">RSVP</li>
-    </ul>
+  <div class="collapse navbar-collapse header__nav-list" id="navbarNavAltMarkup">
+    <div class="navbar-nav header__nav-menu">
+      <a class="nav-link header__nav-item active" aria-current="page" href="#">Our Story</a>
+      <a class="nav-link header__nav-item" href="#">Wedding Details</a>
+      <a class="nav-link header__nav-item" href="#">Dress Code</a>
+      <a class="nav-link header__nav-item" href="#">Gifts Registry</a>
+      <a class="nav-link header__nav-item" href="#">Engagement</a>
+      <a class="nav-link header__nav-item" href="#">RSVP</a>
+    </div>
   </div>
 </nav>
-
-<script src="js/header-nav.js"></script>
