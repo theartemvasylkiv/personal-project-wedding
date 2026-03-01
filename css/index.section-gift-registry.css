@@ -1,5 +1,6 @@
 .gifts-registry__title {
   color: var(--color-primary-light);
+  line-height: 1.5;
 
   .gift-registry-dot {
     color: var(--color-secondary);
@@ -9,4 +10,81 @@
 .gifts-registry__text {
   color: var(--color-primary-text-dark);
   text-align: center;
+  line-height: 29px;
+  padding-bottom: 10px;
+}
+
+
+.gifts-registry__decoration {
+  height: 32px;
+  width: 100%;
+  max-width: 93px;
+  /* adjust as needed */
+  display: block;
+  object-fit: contain;
+  padding-bottom: 110px;
+}
+
+.gifts-registry__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+  /* space between elements */
+  padding-bottom: 90px;
+}
+
+.gifts-registry__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.gifts-registry__button {
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 16.5px;
+}
+
+.gifts-registry__button--amazon {
+  width: 195px;
+  height: 65px;
+  background-color: var(--color-primary-light);
+  border: 1px solid var(--color-primary-light);
+  color: var(--color-primary-dark);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.gifts-registry__button--amazon:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-primary-light);
+}
+
+.gifts-registry__button--amazon:active {
+  background-color: var(--color-klick-button);
+  color: inherit;
+}
+
+
+.gifts-registry__button--macys {
+  width: 179px;
+  height: 65px;
+  border: 1px solid var(--color-primary-light);
+  background-color: var(--color-primary-dark);
+  color: var(--color-primary-light);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.gifts-registry__button--macys:hover {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary-dark);
+}
+
+.gifts-registry__button--macys:active {
+  background-color: var(--color-primary-dark);
+  color: var(--color-primary-light);
 }
