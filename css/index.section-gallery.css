@@ -4,8 +4,161 @@
 
 .gallery__description {
   color: var(--color-primary-text-light);
+  padding-left: 24px;
+  padding-right: 24px;
+  text-align: center;
+  line-height: 29px;
 }
 
 .story-gallery__item--large {
   min-width: 176px;
+}
+
+.gallery__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.gallery__decoration {
+  height: 32px;
+  width: 100%;
+  max-width: 93px;
+  /* adjust as needed */
+  display: block;
+  object-fit: contain;
+}
+
+/* Carousel Viewer Styles */
+.gallery__viewer {
+  margin: 32px auto;
+  width: 100%;
+  max-width: min(90vw, 600px);
+  /* no padding here so slides occupy full width */
+  box-sizing: border-box;
+}
+
+/* ensure inner elements fill the viewer */
+.carousel-inner,
+.carousel-item {
+  width: 100%;
+  box-sizing: border-box;
+  flex: 0 0 100%;
+  /* each slide spans full width */
+  margin: 0;
+  /* reset any stray margins */
+  padding: 0;
+  /* no padding inside slides */
+}
+
+/* stack slides to eliminate blank area during animation */
+.carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carousel-item.active {
+  position: relative;
+}
+
+/* provide neutral background so teal doesn't show through during slide */
+.carousel-item,
+.gallery__hero {
+  background-color: #fff;
+}
+
+.gallery__hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.gallery__hero-image {
+  width: 100%;
+  aspect-ratio: 272 / 147;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+}
+
+/* Navigation Buttons */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 48px;
+  height: 48px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Thumbnails Container */
+.gallery__thumbnails {
+  display: flex;
+  gap: 7.33px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 24px;
+  width: 100%;
+  max-width: min(90vw, 600px);
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+
+/* Thumbnail Styles */
+.gallery__thumb {
+  background: none;
+  border: 3px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  flex-shrink: 0;
+  width: calc(25% - 5.5px);
+  aspect-ratio: 1 / 1;
+}
+
+.gallery__thumb-image {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  border-radius: 4px;
+  transition: filter 0.3s ease;
+  filter: brightness(0.5);
+}
+
+/* Active Thumbnail - Bright */
+.gallery__thumb--active .gallery__thumb-image {
+  filter: brightness(1);
+  box-shadow: 0 0 0 2px var(--color-primary-light, #d4a574);
+}
+
+/* Inactive thumbnails stay dim even on hover */
+.gallery__thumb .gallery__thumb-image {
+  filter: brightness(0.5);
+}
+
+.gallery__thumb:hover .gallery__thumb-image {
+  filter: brightness(1);
 }
