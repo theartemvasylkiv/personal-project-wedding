@@ -1,22 +1,27 @@
 <!-- Footer section (BEM HTML only, no CSS) -->
-<footer class="footer container" role="contentinfo">
+<footer class="footer container">
   <div class="footer__inner">
-    <!-- Footer navigation section -->
-    <div class="footer__nav-section">
-      <nav
-        data-hx-trigger="load"
-        data-hx-swap="outerHTML"
-        data-hx-get="global.header-nav.partial.html"
-      ></nav>
-    </div>
-
-    <!-- Footer bottom section with copyright -->
-    <div class="footer__bottom-section">
-      <div class="footer__copyright-left">
-        <p class="footer__copyright-text">&copy; Created by</p>
+    <div class="footer__container">
+      <div class="footer__brand">
+        <a href="/" class="footer__logo-link">
+          <img src="img/header-logo.svg" alt="John and Jane logo" class="footer__logo-image" />
+        </a>
       </div>
-      <div class="footer__copyright-right">
-        <p class="footer__copyright-text">All rights Reserved</p>
+
+      <nav class="footer__nav">
+        <ul class="footer__links">
+          <li><a href="#story">Our Story</a></li>
+          <li><a href="#wedding-details">Wedding Details</a></li>
+          <li><a href="#dress-code">Dress Code</a></li>
+          <li><a href="#gifts-registry">Gifts Registry</a></li>
+          <li><a href="#engagement">Engagement</a></li>
+          <li><a href="#rsvp">RSVP</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__meta">
+        <p class="footer__credits">© <span id="footer-year"></span> Created by</p>
+        <p class="footer__rights">All rights Reserved</p>
       </div>
     </div>
   </div>

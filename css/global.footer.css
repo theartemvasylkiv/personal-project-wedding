@@ -1,3 +1,65 @@
-.footer__copyright-text {
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding-top: 60px;
+  padding-right: 12px;
+  padding-left: 12px;
+  padding-bottom: 0;
+}
+
+.footer__inner .footer__copyright-text {
   color: var(--color-primary-light);
+  padding: 0;
+}
+
+
+.footer__brand {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  max-width: 152px;
+  max-height: 70px;
+  padding-bottom: 100px;
+}
+
+/* Footer link reset: remove default blue color and underline */
+.footer__nav a,
+.footer__links a,
+.footer__meta a {
+  color: inherit;
+  /* use parent color */
+  text-decoration: none;
+  /* remove underline */
+  transition: opacity 0.2s ease;
+}
+
+/* On hover, keep color but adjust opacity or add underline if needed */
+.footer__nav a:hover,
+.footer__links a:hover,
+.footer__meta a:hover {
+  color: var(--color-white);
+  text-decoration: none;
+  /* slightly dim on hover for feedback */
+}
+
+.footer__nav {
+  color: var(--color-primary-light);
+  text-align: center;
+  font-size: 18px;
+  line-height: 2.5;
+  font-weight: 400;
+}
+
+.footer__meta {
+  color: var(--color-primary-light);
+  font-size: 14px;
+  text-align: center;
+  border-top: 1px solid var(--color-line-footer);
+  padding-top: 16px;
+  width: 100%;
+  max-width: 500px;
 }
