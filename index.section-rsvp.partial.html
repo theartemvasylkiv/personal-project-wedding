@@ -1,46 +1,32 @@
 <section class="rsvp">
-  <div class="rsvp__background"></div>
-  <div class="rsvp__container container">
-    <h2 class="rsvp__title">RSVP</h2>
-    <!-- delete width -->
-    <div class="rsvp__decoration">
-      <img
-        src="img/details-decorate.svg"
-        alt="decorative flourish"
-        width="100px"
-      />
+  <div class="rsvp__background">
+    <div class="rsvp__container">
+      <h2 class="rsvp__title">RSVP</h2>
+      <!-- delete width -->
+      <div class="rsvp__decoration">
+        <img src="../img/details-decorate.svg" alt="decorative flourish" />
+      </div>
+
+      <p class="rsvp__description">
+        We hope you can join us! Please enter your name in the form.
+      </p>
+      <!-- надати стилі формі -->
+      <form class="rsvp__form" action="#" method="post" novalidate>
+        <div class="rsvp__field">
+          <label class="rsvp__label" for="rsvp-name">RSVP</label>
+          <input class="rsvp__input" id="rsvp-name" name="name" type="text" placeholder="Your name" required />
+        </div>
+
+        <div class="rsvp__field">
+          <label class="rsvp__label" for="rsvp-email">Email*</label>
+          <input class="rsvp__input" id="rsvp-email" name="email" type="email" placeholder="Email" required />
+        </div>
+
+        <div class="rsvp__actions">
+          <button class="rsvp__button" type="submit">Send</button>
+        </div>
+      </form>
     </div>
-
-    <p class="rsvp__description">
-      We hope you can join us! Please enter your name in the form.
-    </p>
-<!-- надати стилі формі -->
-    <form class="rsvp__form" action="#" method="post" novalidate>
-      <div class="rsvp__field">
-        <label class="rsvp__label" for="rsvp-name">RSVP</label>
-        <input
-          class="rsvp__input"
-          id="rsvp-name"
-          name="name"
-          type="text"
-          placeholder="Your name"
-        />
-      </div>
-
-      <div class="rsvp__field">
-        <label class="rsvp__label" for="rsvp-email">Email*</label>
-        <input
-          class="rsvp__input"
-          id="rsvp-email"
-          name="email"
-          type="email"
-          placeholder="Email"
-        />
-      </div>
-
-      <div class="rsvp__actions">
-        <button class="rsvp__button" type="submit">Send</button>
-      </div>
-    </form>
   </div>
+
 </section>
