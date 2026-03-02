@@ -7,12 +7,14 @@
   background-size: cover;
   background-position: center;
 
+  background-attachment: fixed;
+
   display: flex;
   justify-content: center;
   /* важливо */
   align-items: center;
 
-  padding: 80px 24px;
+  padding: 100px 24px;
   /* щоб не прилипало до країв */
 }
 
@@ -51,16 +53,25 @@
   gap: 20px;
   width: 100%;
   box-sizing: border-box;
+  font-family: "Nanum Myeongjo", serif;
+  line-height: 14px;
+  font-size: 14px;
 }
 
 .rsvp__field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: var(--color-primary-light);
   width: 100%;
+  min-width: 194px;
+  height: 60px;
   box-sizing: border-box;
 
   display: flex;
   flex-direction: column;
-  padding: 12px 16px;
+  padding: 21px 40px;
   /* якщо потрібен внутрішній відступ */
 }
 
@@ -70,10 +81,28 @@
   border: none;
   background: transparent;
   outline: none;
+  color: var(--color-tertiary-light);
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.rsvp__input::placeholder {
+  color: var(--color-tertiary-light);
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 14px;
+  line-height: 1.2;
 }
 
 .rsvp__actions {
   background-color: var(--color-secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-width: 194px;
+  height: 56px;
+
 }
 
 .rsvp__decoration {
@@ -83,4 +112,16 @@
   /* adjust as needed */
   display: block;
   object-fit: contain;
+}
+
+.rsvp__button {
+  color: var(--color-white);
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 14px;
+  box-sizing: border-box;
+  border: none;
+  background: transparent;
+  outline: none;
+  letter-spacing: 1.4px;
+  font-weight: 400;
 }
