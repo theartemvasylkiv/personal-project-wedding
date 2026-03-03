@@ -6,11 +6,39 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 25px;
+  padding: 24px;
   color: var(--color-primary-light);
   position: relative;
   z-index: 1002;
   background: var(--color-primary-dark);
+}
+
+/* Responsive: show hamburger below 991px, show nav links above */
+@media (max-width: 991px) {
+  .header__nav-list {
+    display: none;
+  }
+
+  .header__nav-toggle {
+    display: block;
+  }
+}
+
+@media (min-width: 992px) {
+  .header__nav-list {
+    display: flex !important;
+    position: static;
+    height: auto;
+    background: none;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 0;
+    overflow: visible;
+  }
+
+  .header__nav-toggle {
+    display: none;
+  }
 }
 
 /* ===== Brand ===== */
@@ -73,7 +101,7 @@
 
 /* Show menu when .show class is active */
 .header__nav-list.show {
-  display: flex !important;
+  display: flex;
 }
 
 .header__nav-menu {
@@ -121,26 +149,49 @@
    Desktop
 ================================= */
 
-/* @media (min-width: 1000px) {
+@media (min-width: 768px) {
+  .header__nav {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media (min-width: 992px) {
+  .header__nav {
+    padding-left: 40px;
+    padding-right: 40px;
+    height: 104px;
+    align-items: center;
+  }
+
+  .header__nav-list,
+  .header__nav-list.show {
+    display: flex;
+    position: static;
+    height: auto;
+    background: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: auto;
+    padding-top: 0;
+  }
+
+  .header__nav-menu {
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    justify-content: flex-end;
+    width: auto;
+    padding: 0;
+    margin: 0;
+  }
+
   .header__nav-toggle {
     display: none;
   }
 
-  .header__nav-list {
-    position: static;
-    max-height: none;
-    background: transparent;
-    width: auto;
-  }
-
-  .header__nav-menu {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    padding: 0;
-  }
-
   .header__nav-item {
-    padding: 0;
+    font-size: 16px;
   }
-}  */
+}
