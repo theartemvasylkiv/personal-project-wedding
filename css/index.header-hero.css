@@ -24,7 +24,7 @@
   justify-content: center;
   box-sizing: border-box;
   max-width: 100%;
-  padding: 0 25px;
+  padding: 0 24px;
   /* адаптивний padding для мобільних */
 }
 
@@ -42,7 +42,9 @@
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
+  border-radius: 0;
 }
+
 
 /* ===== Card Elements ===== */
 .card__pretitle {
@@ -69,10 +71,11 @@
 
 .card__title {
   font-size: 26px;
-  font-weight: 9пше00;
+  font-weight: 900;
   color: var(--color-primary-dark);
   text-align: center;
   margin: 0 15px;
+  font-family: "Suranna", serif;
 }
 
 .card__title-symbol {
@@ -86,4 +89,43 @@
   color: var(--color-hero-title-date);
   text-align: center;
   margin: 30px;
+}
+
+@media (min-width: 768px) {
+  .hero__background {
+    min-height: 742px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .hero__container {
+    height: auto;
+    padding: 0 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 357px;
+    width: 100%;
+  }
+
+  .hero__card {
+    min-width: 338px;
+    height: 357px;
+    padding: 40px 46px;
+    flex-grow: 1;
+  }
+
+  .card__title {
+    font-size: 49px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero__card {
+    width: 480px;
+    min-width: 338px;
+    max-width: 600px;
+  }
 }
