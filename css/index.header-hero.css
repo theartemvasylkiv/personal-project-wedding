@@ -91,12 +91,18 @@
   margin: 30px;
 }
 
+.card__dot {
+  color: var(--color-secondary);
+}
+
 @media (min-width: 768px) {
   .hero__background {
     min-height: 742px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* одна колонка */
+    /* притиснути grid до лівого краю */
+    grid-template-columns: minmax(320px, 50%) 1fr;
   }
 
   .hero__container {
@@ -122,10 +128,36 @@
   }
 }
 
+@media (min-width: 944px) {
+  .hero__background {
+    min-height: 683px;
+  }
+}
+
+
+@media (min-width: 1073px) {
+  .hero__background {
+    min-height: 848px;
+  }
+}
+
 @media (min-width: 1200px) {
   .hero__card {
     width: 480px;
     min-width: 338px;
     max-width: 600px;
+  }
+
+  .hero__background {
+    background-image: url(../img/couple-painting.png);
+    background-size: cover;
+    background-position: center;
+    min-height: 848px;
+    max-width: 100%;
+  }
+
+
+  .hero__container {
+    max-width: 1200px;
   }
 }
