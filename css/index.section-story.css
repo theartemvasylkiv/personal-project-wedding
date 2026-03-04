@@ -10,9 +10,12 @@
   flex-wrap: wrap;
   /* для адаптивності */
   margin: 0 auto;
-  padding-top: 0;
+  gap: 10px;
+  padding-top: 65px;
   padding-left: 24px;
   padding-right: 24px;
+  padding-bottom: 30px;
+
 
 }
 
@@ -26,13 +29,14 @@
   width: 100%;
   height: auto;
   margin: 0 auto;
-  padding: 16px;
+  padding: 32px 16px 24px;
 }
 
 /* Title */
 .story__title {
   color: var(--color-primary-light);
   padding-left: 16px;
+  padding-bottom: 20px;
 }
 
 /* Decorative flourish */
@@ -77,29 +81,53 @@
 ========================== */
 
 /* Wider screens: вертикальне центрування контенту */
-/* @media (min-width: 768px) {
-  .story__content {
-    justify-content: center;
-    height: 100%;
-  }
-} */
-
-/* Small screens: stack gallery under content */
-/* @media (max-width: 767px) {
+@media (min-width: 767px) {
   .story__container {
-    flex-direction: column;
-    width: calc(100% - 32px);
-    height: auto;
-    margin: 0 16px;
-    align-items: stretch;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 65px 32px 30px;
+
   }
 
-  .story__content,
-  .story__gallery {
-    width: 100%;
+  .story__gallery img {
+    padding-top: 0;
   }
 
-  .story__gallery {
-    margin-top: 16px;
+  .story__title {
+    font-size: 50px;
+    padding: 0;
   }
-} */
+
+  .story__content {
+    padding: 43px;
+    gap: 20px;
+  }
+
+  .story__text-wrapper {
+    padding: 0;
+  }
+
+  .story__flourish img {
+    padding: 0;
+  }
+
+  .story__paragraph {
+    padding-bottom: 18px;
+  }
+}
+
+
+@media (min-width: 991px) {
+  .story__container {
+    padding: 65px 40px 30px;
+
+  }
+
+  .story__gallery img {
+    padding-bottom: 0;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
