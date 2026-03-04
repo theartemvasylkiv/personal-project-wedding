@@ -69,6 +69,7 @@
 
 .wedding-details__paragraph {
   color: var(--color-secondary-text-dark);
+  margin: 0;
 }
 
 .wedding-details__hotel-name {
@@ -80,7 +81,7 @@
 .wedding-details__location {
   color: var(--color-secondary-text-light);
   display: inline-flex;
-  align-items: flesh-start;
+  align-items: flex-start;
   gap: 8px;
   /* space between icon and text */
 }
@@ -119,4 +120,97 @@
 
 .wedding-details__hotel-name {
   font-size: 14px;
+}
+
+@media (min-width: 767px) {
+  .wedding-details__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    max-height: 648px;
+    min-height: 539px;
+  }
+
+  .wedding-details__media--top {
+    order: 2;
+    max-width: 100%;
+  }
+
+  .wedding-details__image {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .wedding-details__info {
+    order: 1;
+  }
+
+  .wedding-details__container {
+    padding-left: 32px;
+    padding-right: 32px;
+
+    gap: 30px
+  }
+
+  .wedding-details__header-title {
+    font-size: 50px;
+  }
+
+  .wedding-details {
+    padding-bottom: 110px;
+    padding-top: 105px;
+  }
+
+  .wedding-details__title {
+    font-size: 33px;
+  }
+
+  .wedding-details__info {
+    padding: 37px 46px;
+    gap: 15px;
+  }
+
+  .wedding-details__time {
+    margin: 0;
+  }
+
+  .wedding-details__hotel-name {
+    margin: 0;
+  }
+
+}
+
+
+
+@media (min-width: 991px) {
+  .wedding-details__info {
+    padding: 45px 60px;
+    gap: 15px;
+  }
+
+  .wedding-details__row {
+    max-height: 562px;
+    min-height: 456px;
+  }
+
+  .wedding-details__container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .wedding-details {
+    padding-bottom: 120px;
+    padding-top: 130px;
+
+
+  }
+
+  .wedding-details__header-title {
+    font-size: 60px;
+  }
+
+
+  .wedding-details__paragraph {
+    padding-bottom: 40px;
+  }
 }
