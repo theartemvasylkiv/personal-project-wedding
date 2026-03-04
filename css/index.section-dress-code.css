@@ -13,6 +13,7 @@
 }
 
 
+
 .dress-code__title {
   color: var(--color-primary-light);
   line-height: 1.1;
@@ -30,14 +31,16 @@
   color: var(--color-primary-text-light);
   font-size: 20px;
   text-align: center;
+  margin: 0;
 }
 
 /* ----------------------------- */
 /* Divider */
 /* ----------------------------- */
 
-.dress-code__divider {
+.dress-code__divider p {
   padding-bottom: 30px;
+  margin: 0;
 }
 
 
@@ -80,7 +83,7 @@
   flex-direction: column;
   gap: 50px;
   /* відстань між картками */
-  padding-bottom: 125px;
+  padding-bottom: 65px;
 }
 
 .dress-code__card-icon {
@@ -111,4 +114,84 @@
   color: var(--color-primary-text-dark);
   text-align: center;
   line-height: 29px;
+}
+
+.dress-code__image img {
+  padding-top: 65px;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+
+@media (min-width: 479px) {
+  .dress-code__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+    gap: 30px;
+    padding-bottom: 45px;
+
+
+    /* 2 колонки для карток */
+    /* 2 колонки для карток */
+  }
+
+  .dress-code__card {
+    padding: 39px 33px;
+    line-height: 29px;
+  }
+}
+
+
+
+@media (min-width: 767px) {
+  .dress-code__title {
+    font-size: 50px;
+  }
+
+  .dress-code__container {
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 105px;
+  }
+
+  .dress-code__card-title {
+    font-size: 33px;
+  }
+
+  .dress-code__card-icon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .dress-code__card-icon svg {
+    width: 70px;
+    height: 70px;
+  }
+
+
+}
+
+@media (min-width: 991px) {
+  .dress-code__container {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 105px;
+  }
+
+  .dress-code__title {
+    font-size: 60px;
+  }
+
+  .dress-code__card-title {
+    font-size: 36px;
+  }
+
+  .dress-code__card {
+    gap: 20px;
+
+
+
+  }
 }
