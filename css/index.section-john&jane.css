@@ -47,5 +47,66 @@
   padding-right: 15px;
 }
 
+/* Multi-active для john-jane__carousel */
+.john-jane__carousel .carousel-item {
+  display: none;
+  transition: none;
+  position: static;
+}
 
-@media (min-width: 478px) {}
+.john-jane__carousel .carousel-item.multi-active {
+  display: block;
+  position: relative;
+  float: left;
+}
+
+.john-jane__carousel .carousel-inner {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+
+/* 2 фото в каруселі, розмір 186x183 */
+@media (min-width: 478px) {
+  .john-jane__carousel {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+  }
+
+  .john-jane__image {
+    flex: 0 0 186px;
+    width: 186px;
+    height: 183px;
+    aspect-ratio: 186 / 183;
+  }
+}
+
+/* 3 фото в каруселі, розмір 210x206 */
+@media (min-width: 767px) {
+  .john-jane__carousel {
+    gap: 18px;
+  }
+
+  .john-jane__image {
+    flex: 0 0 210px;
+    width: 210px;
+    height: 206px;
+    aspect-ratio: 210 / 206;
+  }
+}
+
+/* 6 фото в каруселі, розмір 124x123 */
+@media (min-width: 991px) {
+  .john-jane__carousel {
+    gap: 12px;
+  }
+
+  .john-jane__image {
+    flex: 0 0 124px;
+    width: 124px;
+    height: 123px;
+    aspect-ratio: 124 / 123;
+  }
+}
