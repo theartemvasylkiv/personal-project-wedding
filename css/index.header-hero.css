@@ -2,65 +2,62 @@
    Hero Section
 ================================= */
 
-/* ===== Hero Section ===== */
 .hero__background {
-  background-image: url(../img/couple-painting.png);
+  background-image: url("../img/couple-painting.png");
   background-size: cover;
   background-position: center;
+
   min-height: 521px;
+
+  padding: 60px 0;
+
   display: flex;
   align-items: center;
-  justify-content: center;
-  overflow: hidden;
 }
+
+/* container керує позицією */
 
 .hero__container {
   width: 100%;
-  height: 272px;
-  /* фіксована висота */
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  box-sizing: border-box;
-  max-width: 100%;
-  padding: 0 24px;
-  /* адаптивний padding для мобільних */
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
-/* ===== Hero Card ===== */
+
+
+/* CARD */
+
 .hero__card {
   width: 100%;
-  /* адаптивна ширина */
-  min-width: 262px;
-  /* мінімальна ширина на мобільних */
-  height: 100%;
-  /* фіксована висота = 272px */
+  min-height: 260px;
+  max-width: 480px;
+
   background-color: var(--color-primary-light);
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 20px;
   box-sizing: border-box;
-  border-radius: 0;
 }
 
-
 /* ===== Card Elements ===== */
+
 .card__pretitle {
   font-family: "Allura", cursive;
   font-size: 22px;
-  font-weight: 400;
   color: var(--color-secondary);
   text-align: center;
-  margin: 30px 0;
+
 }
 
 .card__ornament {
+  height: 32px;
   display: flex;
   justify-content: center;
-  height: 32px;
-  margin-bottom: 30px;
 }
 
 .card__ornament img {
@@ -70,94 +67,74 @@
 }
 
 .card__title {
-  font-size: 26px;
+  font-size: 34px;
   font-weight: 900;
-  color: var(--color-primary-dark);
-  text-align: center;
-  margin: 0 15px;
   font-family: "Suranna", serif;
+
+  color: var(--color-primary-dark);
+
+  text-align: center;
+  margin: 0;
 }
 
-.card__title-symbol {
+.card__title-symbol,
+.card__dot {
   color: var(--color-secondary);
-  padding: 0;
 }
 
 .card__datetime {
   font-size: 14px;
   font-weight: 800;
+
   color: var(--color-hero-title-date);
+
   text-align: center;
-  margin: 30px;
 }
 
-.card__dot {
-  color: var(--color-secondary);
-}
+/* ===============================
+   TABLET
+================================= */
 
-@media (min-width: 768px) {
+@media (min-width: 767px) {
   .hero__background {
     min-height: 742px;
-    display: grid;
-    grid-template-columns: 1fr;
-    /* одна колонка */
-    /* притиснути grid до лівого краю */
-    grid-template-columns: minmax(320px, 50%) 1fr;
-  }
-
-  .hero__container {
-    height: auto;
-    padding: 0 32px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    min-height: 357px;
-    width: 100%;
-  }
-
-  .hero__card {
-    min-width: 338px;
-    height: 357px;
-    padding: 40px 46px;
-    flex-grow: 1;
+    padding-top: 190px;
+    padding-bottom: 195px;
   }
 
   .card__title {
-    font-size: 49px;
+    font-size: 59px;
   }
-}
-
-@media (min-width: 944px) {
-  .hero__background {
-    min-height: 683px;
-  }
-}
-
-
-@media (min-width: 1073px) {
-  .hero__background {
-    min-height: 848px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .hero__card {
-    width: 480px;
-    min-width: 338px;
-    max-width: 600px;
-  }
-
-  .hero__background {
-    background-image: url(../img/couple-painting.png);
-    background-size: cover;
-    background-position: center;
-    min-height: 848px;
-    max-width: 100%;
-  }
-
 
   .hero__container {
-    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 32px;
   }
+
+  .hero__card {
+    height: 357px;
+    padding: 40px 46px;
+  }
+
+
+}
+
+/* ===============================
+   DESKTOP
+================================= */
+
+@media (min-width: 991px) {
+  .hero__background {
+    min-height: 911px;
+    padding-top: 250px;
+    padding-bottom: 260px;
+  }
+
+  .hero__container {
+
+    padding: 0 40px;
+  }
+
+
 }
