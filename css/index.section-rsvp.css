@@ -125,3 +125,36 @@
   letter-spacing: 1.4px;
   font-weight: 400;
 }
+
+
+@media (min-width: 767px) {
+  .rsvp__title {
+    font-size: 50px;
+  }
+
+  .rsvp__background {
+    padding: 130px 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .rsvp__description {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 991px) {
+  .rsvp__title {
+    font-size: 60px;
+  }
+
+  .rsvp__background {
+    padding: 160px 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .rsvp__description {
+    font-size: 20px;
+  }
+}
