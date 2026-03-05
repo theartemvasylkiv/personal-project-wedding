@@ -6,7 +6,7 @@
   background-position: center;
   background-attachment: fixed;
 
-  padding: 100px 12px;
+  padding: 100px 24px;
 }
 
 /* LAYOUT */
@@ -15,6 +15,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 /* CONTAINER */
@@ -134,12 +136,14 @@
 
 @media (min-width: 767px) {
   .rsvp__background {
-    padding: 130px 20px;
+    padding: 130px 32px;
   }
 
   .rsvp__layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .rsvp__title {
@@ -151,7 +155,7 @@
 
 @media (min-width: 991px) {
   .rsvp__background {
-    padding: 160px 28px;
+    padding: 160px 40px;
   }
 
   .rsvp__title {
