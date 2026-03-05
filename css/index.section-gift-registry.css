@@ -33,7 +33,8 @@
   padding-left: 24px;
   padding-right: 24px;
   /* space between elements */
-  padding-bottom: 90px;
+  padding-bottom: 65px;
+  padding-top: 10px;
 }
 
 .gifts-registry__buttons {
@@ -87,4 +88,42 @@
 .gifts-registry__button--macys:active {
   background-color: var(--color-primary-dark);
   color: var(--color-primary-light);
+}
+
+@media (min-width: 441px) {
+  .gifts-registry__buttons {
+    flex-direction: row;
+  }
+}
+
+
+@media (min-width: 767px) {
+  .gifts-registry__title {
+    font-size: 50px;
+  }
+
+  .gifts-registry__text {
+    padding-left: 140px;
+    padding-right: 140px;
+  }
+
+  .gifts-registry__decoration {
+    padding-bottom: 50px;
+  }
+}
+
+
+@media (min-width: 991px) {
+  .gifts-registry__title {
+    font-size: 60px;
+  }
+
+  .gifts-registry__decoration {
+    padding-bottom: 60px;
+  }
+
+  .gifts-registry__text {
+    padding-left: 180px;
+    padding-right: 180px;
+  }
 }
