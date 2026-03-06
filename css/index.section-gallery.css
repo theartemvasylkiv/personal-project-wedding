@@ -163,7 +163,7 @@
 
 /* Active thumbnail */
 
-.gallery__thumb--active .gallery__thumb-image {
+.gallery__thumb.active .gallery__thumb-image {
   filter: brightness(1);
   box-shadow: 0 0 0 2px var(--color-primary-light, #d4a574);
 }

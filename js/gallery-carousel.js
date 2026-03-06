@@ -1,52 +1,46 @@
 // Gallery Carousel Synchronization
-document.addEventListener('DOMContentLoaded', function () {
-    const carousel = document.getElementById('galleryCarousel');
+document.addEventListener("DOMContentLoaded", function () {
+    const carousel = document.getElementById("galleryCarousel");
     if (!carousel) return;
 
-    const thumbButtons = document.querySelectorAll('.gallery__thumb');
+    const thumbButtons = document.querySelectorAll(".gallery__thumb");
 
-    const carouselInstance = new bootstrap.Carousel(carousel, {
-        interval: false, // Disable auto-slide
-        wrap: true
+    new bootstrap.Carousel(carousel, {
+        interval: false,
+        wrap: true,
     });
 
-    // keep slides full-width -- recalc on load/resize/slide
     function fixSlideWidths() {
-        const items = carousel.querySelectorAll('.carousel-item');
+        const items = carousel.querySelectorAll(".carousel-item");
         const cw = carousel.offsetWidth;
-        items.forEach(i => {
-            i.style.width = cw + 'px';
+
+        items.forEach((item) => {
+            item.style.width = cw + "px";
         });
     }
-    // run immediately and on events
+
+    function updateActiveThumbnail(index) {
+        thumbButtons.forEach((button, i) => {
+            button.classList.toggle("gallery__thumb--active", i === index);
+        });
+    }
+
+    function getActiveSlideIndex() {
+        const items = carousel.querySelectorAll(".carousel-item");
+        return [...items].findIndex((item) =>
+            item.classList.contains("active")
+        );
+    }
+
     fixSlideWidths();
-    window.addEventListener('load', fixSlideWidths);
-    window.addEventListener('resize', fixSlideWidths);
-    carousel.addEventListener('slide.bs.carousel', fixSlideWidths);
 
-    // ensure positions recalc after images load (fix incomplete initial slide)
-    window.addEventListener('load', function () {
-        carouselInstance.to(carouselInstance._activeIndex || 0);
+    window.addEventListener("resize", fixSlideWidths);
+
+    carousel.addEventListener("slid.bs.carousel", function () {
+        const index = getActiveSlideIndex();
+        updateActiveThumbnail(index);
     });
 
-    carousel.addEventListener('slid.bs.carousel', function (event) {
-        updateActiveThumbnail(event.to);
-    });
-
-    // Update thumbnail active state when thumbnail is clicked
-    thumbButtons.forEach((button, index) => {
-        button.addEventListener('click', function () {
-            updateActiveThumbnail(index);
-        });
-    });
-
-    function updateActiveThumbnail(activeIndex) {
-        thumbButtons.forEach((button, index) => {
-            if (index === activeIndex) {
-                button.classList.add('gallery__thumb--active');
-            } else {
-                button.classList.remove('gallery__thumb--active');
-            }
-        });
-    }
+    // init state
+    updateActiveThumbnail(getActiveSlideIndex());
 });
